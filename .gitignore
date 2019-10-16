@@ -13,3 +13,7 @@ node_modules/
 
 # Папка с собранными файлами проекта
 build/
+
+#отмены индексации изменений в bundle-e
+public/bundle.js
+public/bundle.js.map
