@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import WelcomeScreen from "../welcome-screen/welcome-screen";
 
+const clickHandler = () => {
+  //
+};
 const App = (props) =>{
   return (
-    <div>
-      <p>Время на игру : {props.time}</p>
-      <p>Количество возможных ошибок : {props.mistakes}</p>
-    </div>
+    <WelcomeScreen
+      mistakes = {props.mistakes}
+      time = {props.time}
+      onClick = {clickHandler}
+    />
   );
 };
 
