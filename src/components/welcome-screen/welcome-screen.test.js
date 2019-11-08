@@ -4,9 +4,9 @@ import WelcomeScreen from '../welcome-screen/welcome-screen';
 
 it(`WelcomeScreen correctly renders after relaunch`, () => {
   const tree = renderer.create(<WelcomeScreen
-    mistakes={0}
+    errorCount={0}
     time={0}
-    onClick={ jest.fn() }
+    onStartButtonClick={ jest.fn() }
   />).toJSON();
   expect(tree).toMatchSnapshot();
 });
