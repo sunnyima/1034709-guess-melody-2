@@ -17,8 +17,11 @@ it(`GenreQuestionScreen is able to work`, () => {
   const genreQuestionScreen = shallow(<GenreQuestionScreen
     {...testValues}
   />);
-  const startButton = genreQuestionScreen.find(`button`);
-  startButton.simulate(`click`);
+  const event = {preventDefault: () => {}};
+  jest.spyOn(event, `preventDefault`);
+  const answerButton = genreQuestionScreen.find(`.game__tracks`);
+  answerButton.simulate(`submit`, event);
+  expect(event.preventDefault).toBeCalled();
   expect(testValues.onAnswer).toHaveBeenCalledTimes(1);
 });
 

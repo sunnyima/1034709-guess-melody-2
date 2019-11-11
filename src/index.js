@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
-import {questions, settings} from "./mocks/questions";
+import {genreQuestions, artistQuestions, settings} from "./mocks/questions";
 import PropTypes from "prop-types";
 
 const init = (gameSettings, gameQuestions) => {
@@ -24,4 +24,4 @@ init.propTypes = {
 };
 
 
-init(settings, questions);
+init(settings, genreQuestions);

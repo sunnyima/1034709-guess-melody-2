@@ -17,8 +17,8 @@ it(`ArtistQuestionScreen is able to work`, () => {
   const genreQuestionScreen = shallow(<ArtistQuestionScreen
     {...testValues}
   />);
-  const startButton = genreQuestionScreen.find(`button`);
-  startButton.simulate(`click`);
+  const answerButton = genreQuestionScreen.find(`.game__artist`);
+  answerButton.simulate(`change`);
   expect(testValues.onAnswer).toHaveBeenCalledTimes(1);
 });
 

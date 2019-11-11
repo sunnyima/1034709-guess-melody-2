@@ -3,7 +3,7 @@ const settings = {
   errorCount: 3,
 };
 
-const questions = [
+const genreQuestions = [
   {
     type: `genre`,
     genre: `rock`,
@@ -48,6 +48,8 @@ const questions = [
       },
     ],
   },
+];
+const artistQuestions = [
   {
     type: `artist`,
     song: {
@@ -92,4 +94,4 @@ const questions = [
   },
 ];
 
-module.exports = {questions, settings};
+module.exports = {genreQuestions, artistQuestions, settings};
