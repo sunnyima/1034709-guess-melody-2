@@ -6,8 +6,14 @@ it(`GenreQuestionScreen correctly renders after relaunch`, () => {
   const tree = renderer.create(<GenreQuestionScreen
     screenIndex={0}
     question={{
-      answers: [],
+      answers: [
+        {
+          src: ``,
+          genre: ``,
+        }
+      ],
       genre: ``,
+      type: ``,
     }}
     onAnswer={ jest.fn() }
   />).toJSON();

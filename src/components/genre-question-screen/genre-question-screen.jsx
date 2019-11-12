@@ -57,8 +57,14 @@ const GenreQuestionScreen = ({question, screenIndex, onAnswer}) => {
 
 GenreQuestionScreen.propTypes = {
   question: PropTypes.shape({
-    answers: PropTypes.array.isRequired,
+    answers: PropTypes.arrayOf(
+        PropTypes.shape({
+          src: PropTypes.string.isRequired,
+          genre: PropTypes.string.isRequired,
+        }).isRequired
+    ).isRequired,
     genre: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
   }).isRequired,
   screenIndex: PropTypes.number.isRequired,
   onAnswer: PropTypes.func.isRequired,

@@ -9,8 +9,12 @@ it(`GenreQuestionScreen is able to work`, () => {
   const testValues = {
     screenIndex: 0,
     question: {
-      answers: [],
+      answers: [{
+        src: ``,
+        genre: ``,
+      }],
       genre: ``,
+      type: ``,
     },
     onAnswer: clickHandler,
   };

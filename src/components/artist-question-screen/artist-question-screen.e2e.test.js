@@ -9,8 +9,15 @@ it(`ArtistQuestionScreen is able to work`, () => {
   const testValues = {
     screenIndex: 0,
     question: {
-      answers: [],
-      genre: ``,
+      song: {
+        artist: ``,
+        src: ``,
+      },
+      answers: [{
+        picture: ``,
+        artist: ``,
+      }],
+      type: ``,
     },
     onAnswer: clickHandler,
   };
